@@ -1,7 +1,7 @@
 // Example documentation:
 
 /**
- * # This is my Button that contains a [Link](#) or a [Function](#).
+ * @description This is my Button that contains a [Link](#) or a [Function](#).
  * 
  * @example 
  *  import App from 'grommet/components/App';
@@ -11,24 +11,24 @@
  * </App>
  */
 
-export default class Button extends Component {
-    //just a demo component for reference 
-    constructor () {
-        super();
-        this._onClick = this._onClick.bind(this);
-        this._onMouseDown = this._onMouseDown.bind(this);
-        this._onMouseUp = this._onMouseUp.bind(this);
-        this._onFocus = this._onFocus.bind(this);
-        this._onBlur = this._onBlur.bind(this);
-        this.state = {
-            mouseActive: false,
-            focus: false
-        };
-    }
-    render() {
-        return <button>whatever</button> 
-    }
-}
+// export default class Button extends Component {
+//     //just a demo component for reference 
+//     constructor () {
+//         super();
+//         this._onClick = this._onClick.bind(this);
+//         this._onMouseDown = this._onMouseDown.bind(this);
+//         this._onMouseUp = this._onMouseUp.bind(this);
+//         this._onFocus = this._onFocus.bind(this);
+//         this._onBlur = this._onBlur.bind(this);
+//         this.state = {
+//             mouseActive: false,
+//             focus: false
+//         };
+//     }
+//     render() {
+//         return <button>whatever</button> 
+//     }
+// }
 
 Button.propTypes = {
     a11yTitle: PropTypes.string,
@@ -62,7 +62,7 @@ Button.propTypes = {
      */
     label: PropTypes.node,
     /**
-     * @property {['push', 'replace']} method - Valid only when used with path. Indicates whether the browser history should be appended to or replaced. The default is push.
+     * @property {push|replace} method - Valid only when used with path. Indicates whether the browser history should be appended to or replaced. The default is push.
      */
     method: PropTypes.oneOf(['push', 'replace']),
     /**
@@ -70,7 +70,7 @@ Button.propTypes = {
      */
     onClick: PropTypes.func,
     /**
-     * @property {['button', 'reset', 'submit']} type - The type of button. Set the type to submit for the default button on forms. Defaults to button.
+     * @property {button|reset|submit} type - The type of button. Set the type to submit for the default button on forms. Defaults to button.
      */
     type: PropTypes.oneOf(['button', 'reset', 'submit']),
     /**
